@@ -4043,7 +4043,8 @@ mkBlock [BlockStm stm]              _    = stm
 mkBlock items                       sloc = Block items sloc
 
 mkBlockItems :: Stm -> [BlockItem]
-mkBlockItems (Block items _) = items
+-- 
+-- mkBlockItems (Block items _) = items
 mkBlockItems stm             = [BlockStm stm]
 
 mkCommentStm :: L T.Token -> Stm -> Stm
